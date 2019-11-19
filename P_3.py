@@ -25,16 +25,17 @@ ventana.geometry('800x600')
 ventana.title("Parcial")
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:/Users/Labing/Documents/Parcial/key/key.json')
+cred = credentials.Certificate('llave/llave.json')
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://punto3-cc691.firebaseio.com/'
 })
-frame1 = Frame(ventana, bg="pink", highlightthickness=1, width=1280, height=800, bd= 5)
+
+frame1 = Frame(ventana, bg="green", highlightthickness=1, width=1280, height=800, bd= 5)
 frame1.place(x = 0,y = 0)
-texto = Label(ventana, text="ingresa un valor de 8 - 13", bg='cadet blue1', font=("Arial Bold", 14), fg="white")
+texto = Label(ventana, text="Ingrese un valor de 8 - 13", bg='cadet blue1', font=("Arial Bold", 14), fg="white")
 texto.place(x=20, y=20)
-texto1 = Label(ventana, text="ingresa 0 para apagar y 1 para encender los leds", bg='cadet blue1', font=("Arial Bold", 14), fg="white")
+texto1 = Label(ventana, text="ingrese 0 para apagar y 1 para encender los leds", bg='cadet blue1', font=("Arial Bold", 14), fg="white")
 texto1.place(x=20, y=100)
 def led(input):
     content = dato1.get()
